@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./img/icon-logo.png" type="image/x-icon" />
+    <title>IMC | Calculadora</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!--Nav-->
+    <nav class="navbar sticky-top">
+      <div class="container-fluid ms-3 me-3">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+          <img
+            src="./img/icon-logo.png"
+            alt="Logo"
+            width="40"
+            class="d-inline-block align-text-top"
+          />
+          <span>IMC</span></a
+        >
+        <div class="nav-redes">
+          <a
+            href="https://diegorodriguez.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-person-circle"></i
+          ></a>
+          <a
+            href="https://github.com/Diiegor98"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/diiegorodriguez/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+    <!--Frase-->
+    <h2 class="frase text-center">
+      "La alimentación adecuada es la base de una vida saludable."
+    </h2>
+    <!--Descripcion-->
+    <section id="description" class="container mt-3">
+      <h2 class="description-title">
+        Calculadora del índice de masa corporal (IMC)
+      </h2>
+      <p class="description-text">
+        El <b>índice de masa corporal (IMC)</b> es la relación entre la
+        <b>masa corporal</b> de una persona y su <b>estatura</b>. Según los
+        valores propuestos por la Organización Mundial de la Salud (OMS), el IMC
+        es uno de los principales recursos para evaluar el estado nutricional.
+        Tener un IMC controlado logra evitar enfermedades como
+        <b>sobrepeso, hipertensión, diabetes, entre otras</b>. Este cálculo es
+        para <b>adultos</b> igual o mayor a 18 años.
+      </p>
+    </section>
+    <!--Section 1-->
+    <section class="calculadora container d-flex flex-wrap">
+      <div class="col-12 col-md-6 d-flex flex-column">
+        <div class="rango">
+          <div class="rango-color obesidad1"></div>
+          <p><b>Obesidad I:</b> mayor a 45</p>
+        </div>
+        <div class="rango">
+          <div class="rango-color obesidad"></div>
+          <p><b>Obesidad:</b> entre 30 y 45</p>
+        </div>
+        <div class="rango">
+          <div class="rango-color sobrepeso"></div>
+          <p><b>Sobrepeso:</b> entre 25 y 29,9</p>
+        </div>
+        <div class="rango">
+          <div class="rango-color normal"></div>
+          <p><b>Normal:</b> entre 18,5 y 24,9</p>
+        </div>
+        <div class="rango">
+          <div class="rango-color delgadez"></div>
+          <p><b>Delgadez:</b> menor a 18,4</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex flex-column mt-3">
+        <label for="peso" class="form-label"
+          >Introduzca su peso en kilogramos:</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="peso"
+          placeholder="kg"
+          min="0"
+          max="500"
+        />
+        <br />
+        <label for="altura" class="form-label"
+          >Introduzca su altura en centímentros:</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="altura"
+          placeholder="cm"
+          min="0"
+          max="250"
+        />
+        <br />
+        <button
+          type="button"
+          onclick="mostrarResultado()"
+          class="btn btn-success"
+        >
+          Calcular IMC
+        </button>
+        <br />
+        <p id="resultadoContainer" class="text-center"></p>
+      </div>
+    </section>
+    <!--Section 2-->
+    <section class="container d-flex flex-wrap align-items-center mt-4">
+      <img
+        src="./img/img1.jpg"
+        class="img-fluid img-thumbnail col-12 col-md-6"
+        alt="Comida saludable"
+      />
+      <div class="col-12 col-md-6 p-4">
+        <h4 class="section-title text-center">
+          <i class="bi bi-info-circle"></i> ¿PARA QUE SIRVE?
+        </h4>
+        <p class="text-center ps-2 text-s2">
+          El <b>IMC</b> puede utilizarse para detectar problemas de salud
+          relacionados con el peso, pero
+          <b>no es una herramienta de diagnóstico</b>. Por ejemplo, no tiene en
+          cuenta factores como la masa muscular, la densidad ósea o la
+          distribución de la grasa corporal. El índice de masa corporal es sólo
+          una herramienta que puede utilizarse para <b>evaluar el riesgo</b> de
+          que una persona sufra problemas de salud relacionados con el peso.
+          También deben tenerse en cuenta otros factores, como los antecedentes
+          familiares y el estilo de vida.
+        </p>
+      </div>
+    </section>
+    <!--Section 3-->
+    <section class="container d-flex flex-wrap align-items-center mt-4">
+      <div class="col-12 col-md-6 p-4">
+        <h4 class="section-title text-center">
+          <i class="bi bi-heart-pulse-fill"></i> TIPS SALUDABLES
+        </h4>
+        <ul class="ps-2 text-s2">
+          <li>Dieta equilibrada.</li>
+          <li>Incremente la actividad física.</li>
+          <li>Hidratación adecuada.</li>
+          <li>Control de estrés.</li>
+          <li>Monitoreo regular del IMC.</li>
+          <li>Descanso adecuado.</li>
+          <li>Evitar alimentos procesados.</li>
+        </ul>
+      </div>
+      <img
+        src="./img/img2.jpg"
+        class="img-fluid img-thumbnail col-12 col-md-6"
+        alt="Comida saludable"
+      />
+    </section>
+    <!--Footer-->
+    <footer class="p-3 mt-3 container-fluid text-center">
+      <span
+        >Creado por
+        <a
+          href="https://diegorodriguez.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Diego Rodríguez</a
+        ></span
+      >
+    </footer>
+    <!--Scripts-->
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

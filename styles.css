@@ -1,0 +1,120 @@
+/* Variables */
+:root{
+    --primary: #52b788;
+    --secondary: #3a5a40;
+    --terciary: #dad7cda4;
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: var(--primary);
+}
+
+.navbar-brand span{
+    font-weight: bold;
+    color: white;
+}
+
+.nav-redes a{
+    color: white;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-redes a:hover{
+    color: var(--secondary);
+}
+
+/*Frase*/
+.frase{
+    color: var(--secondary);
+    margin: 1.6em;
+    font-style: oblique;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-size: 2.4em;
+}
+
+/* Descripción */
+.description-title{
+    color: var(--primary)
+}
+
+.description-text b{
+    color: var(--secondary)
+}
+
+/* Rangos Calculadora */
+
+.calculadora{
+    padding: 1em;
+    background-color: var(--terciary);
+    border-radius: 15px;
+}
+
+.rango{
+    width: 100%;
+    display: flex;
+    height: 4em;
+    gap: 0.3em;
+    margin: 2px 0;
+}
+
+.rango-color{
+    width: 20%;
+}
+
+.obesidad1{
+    background-color: #c1121f;
+}
+
+.obesidad{
+    background-color: #e85d04;
+}
+
+.sobrepeso{
+    background-color: #ffba08;
+}
+
+.normal{
+    background-color: #377771;
+}
+
+.delgadez{
+    background-color: #94d7aa;
+}
+
+label{
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* Seccion 2 */
+
+.text-s2{
+    font-size: 1.2em;
+}
+
+.bi-info-circle, .bi-heart-pulse-fill{
+    color: var(--secondary);
+    font-size: 1.2em;
+}
+
+.section-title{
+    color: var(--secondary);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Footer*/
+footer{
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.2em;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
